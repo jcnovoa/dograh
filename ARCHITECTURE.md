@@ -278,7 +278,7 @@ graph TB
 
     subgraph Client["API Client"]
         OpenAPI[Auto-generated from OpenAPI spec]
-        AuthInterceptor[@stackframe/stack Auth]
+        AuthInterceptor["stackframe/stack Auth"]
     end
 
     Pages --> Components
