@@ -249,16 +249,16 @@ graph LR
 ```mermaid
 graph TB
     subgraph Pages["App Router Pages"]
-        P_Workflow[/workflow — Agent List + Builder]
-        P_Campaign[/campaigns — Bulk Outbound]
-        P_Telephony[/telephony-configurations]
-        P_Recordings[/recordings]
-        P_Tools[/tools]
-        P_Files[/files — Knowledge Base]
-        P_Reports[/reports]
-        P_Usage[/usage]
-        P_APIKeys[/api-keys]
-        P_Settings[/settings]
+        P_Workflow["workflow — Agent List + Builder"]
+        P_Campaign["campaigns — Bulk Outbound"]
+        P_Telephony["telephony-configurations"]
+        P_Recordings["recordings"]
+        P_Tools["tools"]
+        P_Files["files — Knowledge Base"]
+        P_Reports["reports"]
+        P_Usage["usage"]
+        P_APIKeys["api-keys"]
+        P_Settings["settings"]
     end
 
     subgraph Components["Component Library"]
@@ -297,20 +297,20 @@ graph TB
 graph TB
     subgraph Docker["Docker Compose Stack"]
         subgraph Core["Core Services"]
-            API_Container[dograh-api<br/>FastAPI :8000]
-            UI_Container[dograh-ui<br/>Next.js :3010]
+            API_Container["dograh-api FastAPI :8000"]
+            UI_Container["dograh-ui Next.js :3010"]
         end
 
         subgraph Data_Stores["Data Stores"]
-            PG[PostgreSQL 17<br/>+ pgvector<br/>:5432]
-            RD[Redis 7<br/>:6379]
-            MN[MinIO<br/>:9000 / :9001]
+            PG["PostgreSQL 17 + pgvector :5432"]
+            RD["Redis 7 :6379"]
+            MN["MinIO :9000 / :9001"]
         end
 
         subgraph Networking["Networking & Tunnels"]
-            CF[Cloudflared<br/>Tunnel to API]
-            CT_Server[Coturn<br/>TURN/STUN :3478]
-            NG[Nginx<br/>HTTPS :443<br/>(remote profile)]
+            CF["Cloudflared Tunnel to API"]
+            CT_Server["Coturn TURN/STUN :3478"]
+            NG["Nginx HTTPS :443 - remote profile"]
         end
     end
 
